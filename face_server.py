@@ -24,13 +24,15 @@ async def verify_face(stored_image: UploadFile = File(...), live_image: UploadFi
         stored_image.file.close()
         live_image.file.close()
 
-        result = DeepFace.verify(
-            img1_path=stored_path,
-            img2_path=live_path,
-            model_name="ArcFace",
-            detector_backend="retinaface",
-            distance_metric="cosine"
-        )
+result = DeepFace.verify(
+    img1_path=stored_path,
+    img2_path=live_path,
+    model_name="ArcFace",
+    detector_backend="mtcnn",
+    distance_metric="cosine",
+    enforce_detection=True
+)
+
 
         os.remove(stored_path)
         os.remove(live_path)
