@@ -4,20 +4,16 @@ __pycache__/
 *.pyo
 *.pyd
 
-# Virtual Environment
+
 venv/
 .env/
 
-# OS
 .DS_Store
 Thumbs.db
 
-# IDE
 .vscode/
 .idea/
 
-# Logs
 *.log
 
-# Uploads
 uploads/
