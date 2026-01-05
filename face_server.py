@@ -37,7 +37,7 @@ async def verify_face(
             img1_path=stored_path,
             img2_path=live_path,
             model_name="ArcFace",
-            detector_backend="mtcnn",
+            detector_backend="opencv",
             distance_metric="cosine",
             enforce_detection=False  # 🔥 IMPORTANT
         )
